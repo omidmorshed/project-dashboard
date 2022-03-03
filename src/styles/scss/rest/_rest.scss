@@ -19,7 +19,8 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    // background-color: $color--bg--main;
+    background-color: $color--bg--main;
+    font-family: poppins;
     .container{
         max-width: 1280px;
         width: 100%;
