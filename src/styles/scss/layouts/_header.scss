@@ -1,0 +1,38 @@
+@import"../varibels/varibels";
+body{
+    .container{
+        .header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100px;
+            background: $color--surface;
+            width: 80%;
+            padding: 0 30px;
+            border-bottom: 1px solid $color--border;
+            .right-header{
+                display: flex;
+                justify-content: space-between;
+                width: 210px;
+                button{
+                    width: 100px;
+                    height: 40px;
+                    border-radius: 10px;
+                    line-height: 40px;
+                    outline: none;
+                    text-align: center;
+                    cursor: pointer;
+                }
+                .btn-download{
+                    background-color: $color--surface;
+                    border: 1px solid $color--border;
+                }
+                .btn-create{
+                    background: $color--btn--primary;
+                    color: $color--surface;
+                    border: none;
+                }
+            }
+        }
+    }
+}
