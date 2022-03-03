@@ -54,11 +54,19 @@ body .container .sidebar .top-sidebar .sidebar-logo {
   align-items: center;
   justify-content: flex-start;
 }
+body .container .sidebar .top-sidebar .sidebar-logo .sidebar-logo-link {
+  color: #7a6bff;
+  font-size: 28px;
+}
+body .container .sidebar .top-sidebar .sidebar-logo .sidebar-logo-link i {
+  margin-right: 20px;
+}
 body .container .sidebar .top-sidebar .first-item-list {
   height: auto;
   min-height: 40px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   line-height: 40px;
+  color: #8994a0;
 }
 body .container .sidebar .top-sidebar .first-item-list .first-item-list-link {
   color: blue;
