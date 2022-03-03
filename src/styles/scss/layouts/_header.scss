@@ -10,11 +10,17 @@ body{
             width: 80%;
             padding: 0 30px;
             border-bottom: 1px solid $color--border;
+            .left-header{
+                .title-header{
+                    font-weight: 400;
+                    font-weight: poppins;
+                }
+            }
             .right-header{
                 display: flex;
                 justify-content: space-between;
                 width: 210px;
-                button{
+                .btn{
                     width: 100px;
                     height: 40px;
                     border-radius: 10px;
@@ -22,6 +28,8 @@ body{
                     outline: none;
                     text-align: center;
                     cursor: pointer;
+                    font-weight: 200;
+                    font-family: poppins;
                 }
                 .btn-download{
                     background-color: $color--surface;

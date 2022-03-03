@@ -10,7 +10,7 @@ body{
             justify-content: space-between;
             padding: 0 30px;
             .top-sidebar{
-                div{
+                .sidebar-logo{
                     height: 100px;
                     display: flex;
                     align-items: center;
@@ -21,12 +21,12 @@ body{
                     min-height: 40px;
                     border-bottom: 1px solid $color--border;
                     line-height: 40px;
-                    a{
+                    .first-item-list-link{
                         color: blue;
                     }
-                    ul{
+                    .submenu-list{
                         li{
-                            a{
+                            .submenu-list-link{
                                 color: red;
                             }
                         }

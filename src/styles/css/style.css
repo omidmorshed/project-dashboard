@@ -8,12 +8,16 @@ body .container .header {
   padding: 0 30px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+body .container .header .left-header .title-header {
+  font-weight: 400;
+  font-weight: poppins;
+}
 body .container .header .right-header {
   display: flex;
   justify-content: space-between;
   width: 210px;
 }
-body .container .header .right-header button {
+body .container .header .right-header .btn {
   width: 100px;
   height: 40px;
   border-radius: 10px;
@@ -21,6 +25,8 @@ body .container .header .right-header button {
   outline: none;
   text-align: center;
   cursor: pointer;
+  font-weight: 200;
+  font-family: poppins;
 }
 body .container .header .right-header .btn-download {
   background-color: #fff;
@@ -42,7 +48,7 @@ body .container .sidebar {
   justify-content: space-between;
   padding: 0 30px;
 }
-body .container .sidebar .top-sidebar div {
+body .container .sidebar .top-sidebar .sidebar-logo {
   height: 100px;
   display: flex;
   align-items: center;
@@ -54,10 +60,10 @@ body .container .sidebar .top-sidebar .first-item-list {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   line-height: 40px;
 }
-body .container .sidebar .top-sidebar .first-item-list a {
+body .container .sidebar .top-sidebar .first-item-list .first-item-list-link {
   color: blue;
 }
-body .container .sidebar .top-sidebar .first-item-list ul li a {
+body .container .sidebar .top-sidebar .first-item-list .submenu-list li .submenu-list-link {
   color: red;
 }
 

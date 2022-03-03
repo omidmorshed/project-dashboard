@@ -16,10 +16,10 @@
 @font-face{
     font-family: poppins;
     font-weight: 400;
-    src: url('../../../assets/fonts/Poppins/Poppins-Black.ttf');
+    src: url('../../../assets/fonts/Poppins/Poppins-Bold.ttf');
 }
 @font-face{
     font-family: poppins;
     font-weight: 500;
-    src: url('../../../assets/fonts/Poppins/Poppins-Bold.ttf');
+    src: url('../../../assets/fonts/Poppins/Poppins-Black.ttf');
 }
