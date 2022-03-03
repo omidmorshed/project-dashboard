@@ -26,16 +26,31 @@ body{
                 .first-item-list{
                     height: auto;
                     min-height: 40px;
-                    border-bottom: 1px solid $color--border;
                     line-height: 40px;
-                    color: $color--text--menu;
                     .first-item-list-link{
-                        color: blue;
+                        color: $color--text--menu;
+                        display: block;
+                        font-weight: 200;
+                        position: relative;
+                        i{
+                            color: $color--icon--menu;
+                        }
+                        .home{
+                            margin-right: 10px;
+                        }
+                        .arrow{
+                            position: absolute;
+                            right: 0;
+                            top: calc(50% - 10px);
+                        }
                     }
                     .submenu-list{
+                        display: none;
                         li{
                             .submenu-list-link{
-                                color: red;
+                                color: $color--text--menu;
+                                display: block;
+                                font-weight: 200;
                             }
                         }
                     }

@@ -64,15 +64,32 @@ body .container .sidebar .top-sidebar .sidebar-logo .sidebar-logo-link i {
 body .container .sidebar .top-sidebar .first-item-list {
   height: auto;
   min-height: 40px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   line-height: 40px;
-  color: #8994a0;
 }
 body .container .sidebar .top-sidebar .first-item-list .first-item-list-link {
-  color: blue;
+  color: #6c757e;
+  display: block;
+  font-weight: 200;
+  position: relative;
+}
+body .container .sidebar .top-sidebar .first-item-list .first-item-list-link i {
+  color: rgba(0, 0, 0, 0.25);
+}
+body .container .sidebar .top-sidebar .first-item-list .first-item-list-link .home {
+  margin-right: 10px;
+}
+body .container .sidebar .top-sidebar .first-item-list .first-item-list-link .arrow {
+  position: absolute;
+  right: 0;
+  top: calc(50% - 10px);
+}
+body .container .sidebar .top-sidebar .first-item-list .submenu-list {
+  display: none;
 }
 body .container .sidebar .top-sidebar .first-item-list .submenu-list li .submenu-list-link {
-  color: red;
+  color: #6c757e;
+  display: block;
+  font-weight: 200;
 }
 
 * {
