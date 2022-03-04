@@ -99,6 +99,9 @@ body .container .sidebar .top-sidebar .first-item-list .submenu-list li .submenu
   display: block;
   font-weight: 200;
 }
+body .container .sidebar .top-sidebar .first-item-list .active {
+  display: block;
+}
 body .container .sidebar .bottom-sidebar {
   min-height: 40px;
   line-height: 40px;
