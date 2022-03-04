@@ -38,6 +38,26 @@ body .container .header .right-header .btn-create {
   border: none;
 }
 
+@media (max-width: 1200px) and (min-width: 993px) {
+  body {
+    background: #000;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  body {
+    background: #000;
+  }
+}
+@media (max-width: 767px) and (min-width: 576px) {
+  body {
+    background: #000;
+  }
+}
+@media (max-width: 575px) {
+  body {
+    background: #000;
+  }
+}
 body .container .sidebar {
   width: 20%;
   height: 100vh;
@@ -123,6 +143,26 @@ body .container .sidebar .bottom-sidebar .control-user-menu li .control-user-men
   color: #7a6bff;
 }
 
+@media (max-width: 1200px) and (min-width: 993px) {
+  body {
+    background: #000;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  body {
+    background: #000;
+  }
+}
+@media (max-width: 767px) and (min-width: 576px) {
+  body {
+    background: #000;
+  }
+}
+@media (max-width: 575px) {
+  body {
+    background: #000;
+  }
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -152,6 +192,27 @@ body .container {
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
+}
+
+@media (max-width: 1200px) and (min-width: 993px) {
+  body {
+    background: #000;
+  }
+}
+@media (max-width: 992px) and (min-width: 768px) {
+  body {
+    background: red;
+  }
+}
+@media (max-width: 767px) and (min-width: 576px) {
+  body {
+    background: blue;
+  }
+}
+@media (max-width: 575px) {
+  body {
+    background: pink;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

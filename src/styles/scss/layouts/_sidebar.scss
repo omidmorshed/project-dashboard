@@ -94,3 +94,26 @@ body{
         }
     }
 }
+@media(max-width: 1200px) and (min-width: 993px){
+    body{
+        background: #000;
+    }
+}
+
+@media(max-width: 992px) and (min-width: 768px){
+    body{
+        background: #000;
+    }
+}
+
+@media(max-width: 767px) and (min-width: 576px){
+    body{
+        background: #000;
+    }
+}
+
+@media(max-width: 575px){
+    body{
+        background: #000;
+    }
+}
