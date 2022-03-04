@@ -32,8 +32,10 @@ body{
                         display: block;
                         font-weight: 200;
                         position: relative;
+                        transition: all 0.2s;
                         i{
                             color: $color--icon--menu;
+                            transition: all 0.2s;
                         }
                         .home{
                             margin-right: 10px;
@@ -43,7 +45,14 @@ body{
                             right: 0;
                             top: calc(50% - 10px);
                         }
+                        &:hover{
+                            color: $color--onsurface;
+                            i{
+                                color: $color--onsurface;
+                            }
+                        }
                     }
+                    
                     .submenu-list{
                         display: none;
                         li{
@@ -51,6 +60,30 @@ body{
                                 color: $color--text--menu;
                                 display: block;
                                 font-weight: 200;
+                            }
+                        }
+                    }
+                }
+            }
+            .bottom-sidebar{
+                min-height: 40px;
+                line-height: 40px;
+                .control-user-menu{
+                    li{
+                        .control-user-menu-link{
+                            color: $color--text--menu;
+                            display: block;
+                            font-weight: 200;
+                            position: relative;
+                            transition: all 0.2s;
+                            i{
+                                margin-right: 12px;
+                            }
+                            &:hover{
+                                color: $color--onsurface;
+                                i{
+                                    color: $color--onsurface;
+                                }
                             }
                         }
                     }

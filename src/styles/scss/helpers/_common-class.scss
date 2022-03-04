@@ -1,0 +1,7 @@
+ @mixin link-menu {
+    color: $color--text--menu;
+    display: block;
+    font-weight: 200;
+    position: relative;
+    transition: all 0.2s;
+}
