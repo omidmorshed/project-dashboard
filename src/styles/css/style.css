@@ -18,9 +18,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   background-color: #f7fafc;
   font-family: poppins;
+  height: 3000px;
 }
 body .container {
   max-width: 1280px;
@@ -38,6 +38,20 @@ body .container .header {
   width: 80%;
   padding: 0 30px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+body .container .header .left-header .btn-open-sidebar {
+  display: none;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  background: #4c6fff;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 body .container .header .left-header .title-header {
   font-weight: 400;
@@ -71,10 +85,19 @@ body .container .header .right-header .btn-create {
 @media (max-width: 1200px) and (min-width: 993px) {
   body .container .header {
     height: 80px;
-    background: red;
     width: 100%;
     padding: 0 25px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  body .container .header .left-header {
+    position: relative;
+  }
+  body .container .header .left-header .title-header {
+    margin-left: 100px;
+    line-height: 80px;
+  }
+  body .container .header .left-header .btn-open-sidebar {
+    display: block;
   }
   body .container .header .right-header {
     width: 200px;
@@ -85,14 +108,8 @@ body .container .header .right-header .btn-create {
     border-radius: 8px;
     line-height: 30px;
   }
-  body .container .header .right-header .btn .btn-download {
-    background-color: red;
-  }
 }
 
-body .container .btn-open-sidebar {
-  display: none;
-}
 body .container .sidebar {
   width: 20%;
   height: 100vh;
@@ -177,38 +194,17 @@ body .container .sidebar .bottom-sidebar .control-user-menu li .control-user-men
 body .container .sidebar .bottom-sidebar .control-user-menu li .control-user-menu-link:hover i {
   color: #7a6bff;
 }
+body .container .open-sidebar {
+  width: 20%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0 30px;
+}
 @media (max-width: 1200px) and (min-width: 993px) {
   body .container .sidebar {
     width: 0;
     visibility: hidden;
-  }
-}
-
-@media (max-width: 1200px) and (min-width: 993px) {
-  .header {
-    height: 80px;
-    background: red;
-    width: 100%;
-    padding: 0 25px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  }
-  .header .right-header {
-    width: 200px;
-  }
-  .header .right-header .btn {
-    width: 90px;
-    height: 30px;
-    border-radius: 8px;
-    line-height: 30px;
-  }
-  .header .right-header .btn .btn-download {
-    background-color: red;
-  }
-
-  .sidebar {
-    width: 0;
-    height: 100vh;
-    padding: 0 30px;
+    padding: 0;
+    border: 0;
   }
 }
 

@@ -1,8 +1,5 @@
 body{
     .container{
-        .btn-open-sidebar{
-            display: none;
-        }
         .sidebar{
             width: 20%;
             height: 100vh;
@@ -95,10 +92,18 @@ body{
                 }
             }
         }
+        .open-sidebar{
+            width: 20%;
+            border: 1px solid $color--border;
+            padding: 0 30px;
+        }
         @media(max-width: 1200px) and (min-width: 993px){
+            
             .sidebar{
                 width: 0;
                 visibility: hidden;
+                padding: 0;
+                border: 0;
             }
         }
     }

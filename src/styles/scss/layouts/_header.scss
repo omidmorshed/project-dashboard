@@ -10,7 +10,21 @@ body{
             width: 80%;
             padding: 0 30px;
             border-bottom: 1px solid $color--border;
-            .left-header{
+            .left-header{              
+                .btn-open-sidebar{
+                    display: none;
+                    width: 40px;
+                    height: 40px;
+                    position: absolute;
+                    top: 20px;
+                    left: 0px;
+                    border-radius: 50%;
+                    border: none;
+                    outline: none;
+                    background: $color--btn--primary;
+                    color: $color--surface;
+                    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+                }
                 .title-header{
                     font-weight: 400;
                     font-weight: poppins;
@@ -45,10 +59,19 @@ body{
         @media(max-width: 1200px) and (min-width: 993px){
             .header{
                 height: 80px;
-                background: red;
                 width: 100%;
                 padding: 0 25px;
                 border-bottom: 1px solid $color--border;
+                .left-header{
+                    position: relative;
+                    .title-header{
+                        margin-left: 100px;
+                        line-height: 80px;
+                    }
+                    .btn-open-sidebar{
+                        display: block;
+                    }
+                }
                 .right-header{
                     width: 200px;
                     .btn{
@@ -56,9 +79,6 @@ body{
                         height: 30px;
                         border-radius: 8px;
                         line-height: 30px;
-                        .btn-download{
-                            background-color: red;
-                        }
                     }
                 }    
             }
@@ -66,29 +86,7 @@ body{
     }
 }
 
-// @media(max-width: 1200px) and (min-width: 993px){
-//     body{
-//         .header{
-//             height: 80px;
-//             background: red;
-//             width: 100%;
-//             padding: 0 25px;
-//             border-bottom: 1px solid $color--border;
-//             .right-header{
-//                 width: 200px;
-//                 .btn{
-//                     width: 90px;
-//                     height: 30px;
-//                     border-radius: 8px;
-//                     line-height: 30px;
-//                     .btn-download{
-//                         background-color: red;
-//                     }
-//                 }
-//             }    
-//         }
-//     }
-// }
+// @media(max-width: 1200px) and (min-width: 993px){}
 
 // @media(max-width: 992px) and (min-width: 768px){
 //     body{
