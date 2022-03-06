@@ -1,12 +1,7 @@
 const list_items = document.querySelectorAll('.first-item-list-link')
 const list_submenus = document.querySelectorAll('.submenu-list')
-
-// script header **********
-
-
-
-// script common header & sidebar
-
+const btn_open_sidebar = document.querySelector('.btn-open-sidebar')
+const sidebar = document.querySelector('.sidebar')
 
 
 
@@ -26,4 +21,8 @@ function removeClass(){
         element.classList.remove('active')
     });
 }
+//************btn open sidebar */
 
+btn_open_sidebar.addEventListener('click', ()=>{
+    sidebar.classList.toggle('open-sidebar')
+})

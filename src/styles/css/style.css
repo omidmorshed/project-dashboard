@@ -105,7 +105,7 @@ body .container .header .right-header .btn-create {
   body .container .header .right-header .btn {
     width: 90px;
     height: 30px;
-    border-radius: 8px;
+    border-radius: 6px;
     line-height: 30px;
   }
 }
@@ -194,17 +194,29 @@ body .container .sidebar .bottom-sidebar .control-user-menu li .control-user-men
 body .container .sidebar .bottom-sidebar .control-user-menu li .control-user-menu-link:hover i {
   color: #7a6bff;
 }
-body .container .open-sidebar {
-  width: 20%;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0 30px;
-}
 @media (max-width: 1200px) and (min-width: 993px) {
   body .container .sidebar {
     width: 0;
     visibility: hidden;
     padding: 0;
     border: 0;
+    transition: all 0.3s;
+  }
+  body .container .sidebar .top-sidebar .sidebar-logo {
+    height: 90px;
+  }
+  body .container .sidebar .top-sidebar .sidebar-logo .sidebar-logo-link {
+    color: #7a6bff;
+    font-size: 24px;
+  }
+  body .container .sidebar .top-sidebar .sidebar-logo .sidebar-logo-link i {
+    margin-right: 15px;
+  }
+  body .container .open-sidebar {
+    width: 20%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0 30px;
+    visibility: visible;
   }
 }
 

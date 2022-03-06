@@ -92,18 +92,32 @@ body{
                 }
             }
         }
-        .open-sidebar{
-            width: 20%;
-            border: 1px solid $color--border;
-            padding: 0 30px;
-        }
+        
         @media(max-width: 1200px) and (min-width: 993px){
-            
             .sidebar{
                 width: 0;
                 visibility: hidden;
                 padding: 0;
                 border: 0;
+                transition: all 0.3s;
+                .top-sidebar{
+                    .sidebar-logo{
+                        height: 90px;
+                        .sidebar-logo-link{
+                            color: $color--onsurface;
+                            font-size: 24px;
+                            i{
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+            .open-sidebar{
+                width: 20%;
+                border: 1px solid $color--border;
+                padding: 0 30px;
+                visibility: visible;
             }
         }
     }
