@@ -83,6 +83,30 @@ body{
                 }    
             }
         }
+        @media(max-width: 992px){
+            .header{
+                width: 100%;
+            }
+        }
+        @media(max-width: 575px){
+            .header{
+                .left-header{
+                    .title-header{
+                        font-size: 25px;
+                    }
+                }
+                .right-header{
+                    width: 170px;
+                    .btn{
+                        width: 80px;
+                        height: 30px;
+                        border-radius: 5px;
+                        line-height: 30px;
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
     }
 }
 

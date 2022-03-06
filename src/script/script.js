@@ -2,6 +2,7 @@ const list_items = document.querySelectorAll('.first-item-list-link')
 const list_submenus = document.querySelectorAll('.submenu-list')
 const btn_open_sidebar = document.querySelector('.btn-open-sidebar')
 const sidebar = document.querySelector('.sidebar')
+const btn_up_down = document.querySelector('.btn-up-down')
 
 
 
@@ -25,4 +26,8 @@ function removeClass(){
 
 btn_open_sidebar.addEventListener('click', ()=>{
     sidebar.classList.toggle('open-sidebar')
+})
+
+btn_up_down.addEventListener('click', ()=>{
+    sidebar.classList.toggle('show')
 })
