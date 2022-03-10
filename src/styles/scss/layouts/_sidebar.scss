@@ -1,37 +1,158 @@
 body{
-    .container{
+    .main{
+        .btn-up-down{
+            display: none;
+        }
         .sidebar{
+            position: fixed;
+            left: 0;
             width: 20%;
-            height: 100vh;
-            background: $color--surface;
-            border: 1px solid $color--border;
+            min-height: 100vh;
+            height: auto;
+            background: $color-surface;
+            border: 1px solid $color-border;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 0 30px;
+            transition: all 0.3s;
             .top-sidebar{
                 .sidebar-logo{
                     height: 100px;
                     display: flex;
                     align-items: center;
                     justify-content: flex-start;
-                }
-                .first-item-list{
-                    height: auto;
-                    min-height: 40px;
-                    border-bottom: 1px solid $color--border;
-                    line-height: 40px;
-                    .first-item-list-link{
-                        color: blue;
+                    .sidebar-logo-link{
+                        padding: 0 40px;
+                        color: $color-on-surface;
+                        font-size: 2rem;
+                        .icon {
+                            margin-right: 20px;
+                        }
                     }
-                    .submenu-list{
-                        li{
+                }
+                .menu-sidebar{
+                    padding: 0;
+                    .first-item-list{
+                        height: auto;
+                        min-height: 40px;
+                        line-height: 40px;
+                        .first-item-list-link{
+                            padding: 0 30px;
+                            color: $color-text-menu;
+                            display: block;
+                            font-weight: 200;
+                            position: relative;
+                            transition: all 0.2s;
+                            .icon {
+                                color: $color-icon-menu;
+                                transition: all 0.2s;
+                            }
+                            .home{
+                                margin-right: 10px;
+                            }
+                            .arrow{
+                                position: absolute;
+                                right: 10px;
+                                top: calc(50% - 10px);
+                            }
+                            .arrow-active{
+                                transform: rotate(90deg);
+                            }
+                            &:hover{
+                                color: $color-on-surface;
+                                .icon {
+                                    color: $color-on-surface;
+                                }
+                            }
+                        }
+                        .submenu-list{
+                            display: none;
                             .submenu-list-link{
-                                color: red;
+                                color: $color-text-menu;
+                                display: block;
+                                font-weight: 200;
+                                padding-left: 35px;
+                            }
+                        }
+                        .active{
+                            display: block;
+                        }
+                    }
+                }
+            }
+            .bottom-sidebar{
+                min-height: 40px;
+                line-height: 40px;
+                .control-user-menu{
+                    .control-user-menu-link{
+                        color: $color-text-menu;
+                        display: block;
+                        font-weight: 200;
+                        position: relative;
+                        transition: all 0.2s;
+                        .icon {
+                            margin-right: 12px;
+                        }
+                        &:hover{
+                            color: $color-on-surface;
+                            .icon {
+                                color: $color-on-surface;
                             }
                         }
                     }
                 }
+            }
+        }
+        
+        @media(max-width: 1200px) and (min-width: 993px){
+            .sidebar{
+                width: 0;
+                visibility: hidden;
+                padding: 0;
+                border: 0;
+                .top-sidebar{
+                    .sidebar-logo{
+                        height: 90px;
+                        .sidebar-logo-link{
+                            color: $color-on-surface;
+                            font-size: 1.5rem;
+                            .icon {
+                                margin-right: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+            .open-sidebar{
+                width: 20%;
+                border: 1px solid $color-border;
+                padding: 0 30px;
+                visibility: visible;
+            }
+        }
+        @media(max-width: 992px){
+            .sidebar{
+                width: 100%;
+                height: 0;
+                min-height: 0;
+                visibility: hidden;
+            }
+            .btn-up-down{
+                display: block;
+                width: 100%;
+                height: 30px;
+                color: $color-btn-primary;
+                background: $color-surface;
+                outline: none;
+                border: 0.5px solid $color-border;
+                .icon {
+                    font-size: 1.25rem;
+                }
+            }
+            .show{
+                visibility: visible;
+                min-height: 100px;
+                height: auto;
             }
         }
     }
