@@ -229,7 +229,9 @@ body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .first-item-list
   color: #7a6bff;
 }
 body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .submenu-list {
-  display: none;
+  overflow: hidden;
+  height: 0;
+  transition: all 0.3s;
 }
 body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .submenu-list .submenu-list-link {
   color: #6c757e;
@@ -238,7 +240,8 @@ body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .submenu-list .s
   padding-left: 35px;
 }
 body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .active {
-  display: block;
+  height: 100px;
+  max-height: 200px;
 }
 body .main .sidebar .bottom-sidebar {
   min-height: 40px;

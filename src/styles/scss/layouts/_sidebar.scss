@@ -66,7 +66,9 @@ body{
                             }
                         }
                         .submenu-list{
-                            display: none;
+                            overflow: hidden;
+                            height: 0;
+                            transition: all 0.3s;
                             .submenu-list-link{
                                 color: $color-text-menu;
                                 display: block;
@@ -75,7 +77,8 @@ body{
                             }
                         }
                         .active{
-                            display: block;
+                            height: 100px;
+                            max-height: 200px;
                         }
                     }
                 }
