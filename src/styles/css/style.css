@@ -1,3 +1,39 @@
+.main {
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@media (max-width: 992px) {
+  .main {
+    flex-direction: column;
+  }
+}
+@font-face {
+  font-family: poppins;
+  font-weight: 100;
+  src: url("../../../assets/fonts/Poppins/Poppins-Light.ttf");
+}
+@font-face {
+  font-family: poppins;
+  font-weight: 200;
+  src: url("../../../assets/fonts/Poppins/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: poppins;
+  font-weight: 300;
+  src: url("../../../assets/fonts/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: poppins;
+  font-weight: 400;
+  src: url("../../../assets/fonts/Poppins/Poppins-Bold.ttf");
+}
+@font-face {
+  font-family: poppins;
+  font-weight: 500;
+  src: url("../../../assets/fonts/Poppins/Poppins-Black.ttf");
+}
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -22,19 +58,9 @@ body {
   font-family: poppins;
   height: 3000px;
 }
-body .container {
-  max-width: 1280px;
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
-}
-@media (max-width: 992px) {
-  body .container {
-    flex-direction: column;
-  }
-}
 
-body .container .header {
+body .main .header {
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -44,7 +70,7 @@ body .container .header {
   padding: 0 30px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
-body .container .header .left-header .btn-open-sidebar {
+body .main .header .start-header .btn-open-sidebar {
   display: none;
   width: 40px;
   height: 40px;
@@ -58,56 +84,56 @@ body .container .header .left-header .btn-open-sidebar {
   color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
-body .container .header .left-header .title-header {
+body .main .header .start-header .title-header {
   font-weight: 400;
   font-weight: poppins;
 }
-body .container .header .right-header {
+body .main .header .end-header {
   display: flex;
   justify-content: space-between;
-  width: 210px;
+  width: 220px;
 }
-body .container .header .right-header .btn {
-  width: 100px;
+body .main .header .end-header .btn {
+  width: 107px;
   height: 40px;
   border-radius: 10px;
   line-height: 40px;
   outline: none;
   text-align: center;
-  cursor: pointer;
   font-weight: 200;
   font-family: poppins;
+  padding: 0;
 }
-body .container .header .right-header .btn-download {
+body .main .header .end-header .btn-download {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
-body .container .header .right-header .btn-create {
+body .main .header .end-header .btn-create {
   background: #4c6fff;
   color: #fff;
   border: none;
 }
 @media (max-width: 1200px) and (min-width: 993px) {
-  body .container .header {
+  body .main .header {
     height: 80px;
     width: 100%;
     padding: 0 25px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
-  body .container .header .left-header {
+  body .main .header .start-header {
     position: relative;
   }
-  body .container .header .left-header .title-header {
+  body .main .header .start-header .title-header {
     margin-left: 100px;
     line-height: 80px;
   }
-  body .container .header .left-header .btn-open-sidebar {
+  body .main .header .start-header .btn-open-sidebar {
     display: block;
   }
-  body .container .header .right-header {
+  body .main .header .end-header {
     width: 200px;
   }
-  body .container .header .right-header .btn {
+  body .main .header .end-header .btn {
     width: 90px;
     height: 30px;
     border-radius: 6px;
@@ -115,30 +141,32 @@ body .container .header .right-header .btn-create {
   }
 }
 @media (max-width: 992px) {
-  body .container .header {
+  body .main .header {
     width: 100%;
   }
 }
 @media (max-width: 575px) {
-  body .container .header .left-header .title-header {
-    font-size: 25px;
+  body .main .header .start-header .title-header {
+    font-size: 1.5rem;
   }
-  body .container .header .right-header {
+  body .main .header .end-header {
     width: 170px;
   }
-  body .container .header .right-header .btn {
+  body .main .header .end-header .btn {
     width: 80px;
     height: 30px;
     border-radius: 5px;
     line-height: 30px;
-    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 
-body .container .btn-up-down {
+body .main .btn-up-down {
   display: none;
 }
-body .container .sidebar {
+body .main .sidebar {
+  position: fixed;
+  left: 0;
   width: 20%;
   min-height: 100vh;
   height: auto;
@@ -147,101 +175,109 @@ body .container .sidebar {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 0 30px;
   transition: all 0.3s;
 }
-body .container .sidebar .top-sidebar .sidebar-logo {
+body .main .sidebar .top-sidebar .sidebar-logo {
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
-body .container .sidebar .top-sidebar .sidebar-logo .sidebar-logo-link {
+body .main .sidebar .top-sidebar .sidebar-logo .sidebar-logo-link {
+  padding: 0 40px;
   color: #7a6bff;
-  font-size: 28px;
+  font-size: 2rem;
 }
-body .container .sidebar .top-sidebar .sidebar-logo .sidebar-logo-link i {
+body .main .sidebar .top-sidebar .sidebar-logo .sidebar-logo-link .icon {
   margin-right: 20px;
 }
-body .container .sidebar .top-sidebar .first-item-list {
+body .main .sidebar .top-sidebar .menu-sidebar {
+  padding: 0;
+}
+body .main .sidebar .top-sidebar .menu-sidebar .first-item-list {
   height: auto;
   min-height: 40px;
   line-height: 40px;
 }
-body .container .sidebar .top-sidebar .first-item-list .first-item-list-link {
+body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .first-item-list-link {
+  padding: 0 30px;
   color: #6c757e;
   display: block;
   font-weight: 200;
   position: relative;
   transition: all 0.2s;
 }
-body .container .sidebar .top-sidebar .first-item-list .first-item-list-link i {
+body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .first-item-list-link .icon {
   color: rgba(0, 0, 0, 0.25);
   transition: all 0.2s;
 }
-body .container .sidebar .top-sidebar .first-item-list .first-item-list-link .home {
+body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .first-item-list-link .home {
   margin-right: 10px;
 }
-body .container .sidebar .top-sidebar .first-item-list .first-item-list-link .arrow {
+body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .first-item-list-link .arrow {
   position: absolute;
-  right: 0;
+  right: 10px;
   top: calc(50% - 10px);
 }
-body .container .sidebar .top-sidebar .first-item-list .first-item-list-link:hover {
+body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .first-item-list-link .arrow-active {
+  transform: rotate(90deg);
+}
+body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .first-item-list-link:hover {
   color: #7a6bff;
 }
-body .container .sidebar .top-sidebar .first-item-list .first-item-list-link:hover i {
+body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .first-item-list-link:hover .icon {
   color: #7a6bff;
 }
-body .container .sidebar .top-sidebar .first-item-list .submenu-list {
+body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .submenu-list {
   display: none;
 }
-body .container .sidebar .top-sidebar .first-item-list .submenu-list li .submenu-list-link {
+body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .submenu-list .submenu-list-link {
   color: #6c757e;
   display: block;
   font-weight: 200;
+  padding-left: 35px;
 }
-body .container .sidebar .top-sidebar .first-item-list .active {
+body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .active {
   display: block;
 }
-body .container .sidebar .bottom-sidebar {
+body .main .sidebar .bottom-sidebar {
   min-height: 40px;
   line-height: 40px;
 }
-body .container .sidebar .bottom-sidebar .control-user-menu li .control-user-menu-link {
+body .main .sidebar .bottom-sidebar .control-user-menu .control-user-menu-link {
   color: #6c757e;
   display: block;
   font-weight: 200;
   position: relative;
   transition: all 0.2s;
 }
-body .container .sidebar .bottom-sidebar .control-user-menu li .control-user-menu-link i {
+body .main .sidebar .bottom-sidebar .control-user-menu .control-user-menu-link .icon {
   margin-right: 12px;
 }
-body .container .sidebar .bottom-sidebar .control-user-menu li .control-user-menu-link:hover {
+body .main .sidebar .bottom-sidebar .control-user-menu .control-user-menu-link:hover {
   color: #7a6bff;
 }
-body .container .sidebar .bottom-sidebar .control-user-menu li .control-user-menu-link:hover i {
+body .main .sidebar .bottom-sidebar .control-user-menu .control-user-menu-link:hover .icon {
   color: #7a6bff;
 }
 @media (max-width: 1200px) and (min-width: 993px) {
-  body .container .sidebar {
+  body .main .sidebar {
     width: 0;
     visibility: hidden;
     padding: 0;
     border: 0;
   }
-  body .container .sidebar .top-sidebar .sidebar-logo {
+  body .main .sidebar .top-sidebar .sidebar-logo {
     height: 90px;
   }
-  body .container .sidebar .top-sidebar .sidebar-logo .sidebar-logo-link {
+  body .main .sidebar .top-sidebar .sidebar-logo .sidebar-logo-link {
     color: #7a6bff;
-    font-size: 24px;
+    font-size: 1.5rem;
   }
-  body .container .sidebar .top-sidebar .sidebar-logo .sidebar-logo-link i {
+  body .main .sidebar .top-sidebar .sidebar-logo .sidebar-logo-link .icon {
     margin-right: 15px;
   }
-  body .container .open-sidebar {
+  body .main .open-sidebar {
     width: 20%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     padding: 0 30px;
@@ -249,13 +285,13 @@ body .container .sidebar .bottom-sidebar .control-user-menu li .control-user-men
   }
 }
 @media (max-width: 992px) {
-  body .container .sidebar {
+  body .main .sidebar {
     width: 100%;
     height: 0;
     min-height: 0;
     visibility: hidden;
   }
-  body .container .btn-up-down {
+  body .main .btn-up-down {
     display: block;
     width: 100%;
     height: 30px;
@@ -264,10 +300,10 @@ body .container .sidebar .bottom-sidebar .control-user-menu li .control-user-men
     outline: none;
     border: 0.5px solid rgba(0, 0, 0, 0.1);
   }
-  body .container .btn-up-down i {
-    font-size: 20px;
+  body .main .btn-up-down .icon {
+    font-size: 1.25rem;
   }
-  body .container .show {
+  body .main .show {
     visibility: visible;
     min-height: 100px;
     height: auto;

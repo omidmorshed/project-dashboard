@@ -1,18 +1,19 @@
 body{
-    .container{
+    .main{
         .btn-up-down{
             display: none;
         }
         .sidebar{
+            position: fixed;
+            left: 0;
             width: 20%;
             min-height: 100vh;
             height: auto;
-            background: $color--surface;
-            border: 1px solid $color--border;
+            background: $color-surface;
+            border: 1px solid $color-border;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            padding: 0 30px;
             transition: all 0.3s;
             .top-sidebar{
                 .sidebar-logo{
@@ -21,54 +22,61 @@ body{
                     align-items: center;
                     justify-content: flex-start;
                     .sidebar-logo-link{
-                        color: $color--onsurface;
-                        font-size: 28px;
-                        i{
+                        padding: 0 40px;
+                        color: $color-on-surface;
+                        font-size: 2rem;
+                        .icon {
                             margin-right: 20px;
                         }
                     }
                 }
-                .first-item-list{
-                    height: auto;
-                    min-height: 40px;
-                    line-height: 40px;
-                    .first-item-list-link{
-                        color: $color--text--menu;
-                        display: block;
-                        font-weight: 200;
-                        position: relative;
-                        transition: all 0.2s;
-                        i{
-                            color: $color--icon--menu;
+                .menu-sidebar{
+                    padding: 0;
+                    .first-item-list{
+                        height: auto;
+                        min-height: 40px;
+                        line-height: 40px;
+                        .first-item-list-link{
+                            padding: 0 30px;
+                            color: $color-text-menu;
+                            display: block;
+                            font-weight: 200;
+                            position: relative;
                             transition: all 0.2s;
-                        }
-                        .home{
-                            margin-right: 10px;
-                        }
-                        .arrow{
-                            position: absolute;
-                            right: 0;
-                            top: calc(50% - 10px);
-                        }
-                        &:hover{
-                            color: $color--onsurface;
-                            i{
-                                color: $color--onsurface;
+                            .icon {
+                                color: $color-icon-menu;
+                                transition: all 0.2s;
+                            }
+                            .home{
+                                margin-right: 10px;
+                            }
+                            .arrow{
+                                position: absolute;
+                                right: 10px;
+                                top: calc(50% - 10px);
+                            }
+                            .arrow-active{
+                                transform: rotate(90deg);
+                            }
+                            &:hover{
+                                color: $color-on-surface;
+                                .icon {
+                                    color: $color-on-surface;
+                                }
                             }
                         }
-                    }
-                    .submenu-list{
-                        display: none;
-                        li{
+                        .submenu-list{
+                            display: none;
                             .submenu-list-link{
-                                color: $color--text--menu;
+                                color: $color-text-menu;
                                 display: block;
                                 font-weight: 200;
+                                padding-left: 35px;
                             }
                         }
-                    }
-                    .active{
-                        display: block;
+                        .active{
+                            display: block;
+                        }
                     }
                 }
             }
@@ -76,21 +84,19 @@ body{
                 min-height: 40px;
                 line-height: 40px;
                 .control-user-menu{
-                    li{
-                        .control-user-menu-link{
-                            color: $color--text--menu;
-                            display: block;
-                            font-weight: 200;
-                            position: relative;
-                            transition: all 0.2s;
-                            i{
-                                margin-right: 12px;
-                            }
-                            &:hover{
-                                color: $color--onsurface;
-                                i{
-                                    color: $color--onsurface;
-                                }
+                    .control-user-menu-link{
+                        color: $color-text-menu;
+                        display: block;
+                        font-weight: 200;
+                        position: relative;
+                        transition: all 0.2s;
+                        .icon {
+                            margin-right: 12px;
+                        }
+                        &:hover{
+                            color: $color-on-surface;
+                            .icon {
+                                color: $color-on-surface;
                             }
                         }
                     }
@@ -108,9 +114,9 @@ body{
                     .sidebar-logo{
                         height: 90px;
                         .sidebar-logo-link{
-                            color: $color--onsurface;
-                            font-size: 24px;
-                            i{
+                            color: $color-on-surface;
+                            font-size: 1.5rem;
+                            .icon {
                                 margin-right: 15px;
                             }
                         }
@@ -119,7 +125,7 @@ body{
             }
             .open-sidebar{
                 width: 20%;
-                border: 1px solid $color--border;
+                border: 1px solid $color-border;
                 padding: 0 30px;
                 visibility: visible;
             }
@@ -135,12 +141,12 @@ body{
                 display: block;
                 width: 100%;
                 height: 30px;
-                color: $color--btn--primary;
-                background: $color--surface;
+                color: $color-btn-primary;
+                background: $color-surface;
                 outline: none;
-                border: 0.5px solid $color--border;
-                i{
-                    font-size: 20px;
+                border: 0.5px solid $color-border;
+                .icon {
+                    font-size: 1.25rem;
                 }
             }
             .show{
