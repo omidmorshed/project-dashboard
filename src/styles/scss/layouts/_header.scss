@@ -62,37 +62,47 @@ body{
                 width: 100%;
                 padding: 0 25px;
                 border-bottom: 1px solid $color-border;
+                transition: all 0.3s;
                 .start-header{
                     position: relative;
                     .title-header{
                         margin-left: 100px;
                         line-height: 80px;
+                        font-size: 2rem;
                     }
                     .btn-open-sidebar{
                         display: block;
                     }
                 }
                 .end-header{
-                    width: 200px;
+                    width: 190px;
                     .btn{
                         width: 90px;
                         height: 30px;
                         border-radius: 6px;
                         line-height: 30px;
+                        font-size: 0.75rem;
                     }
                 }    
+            }
+            .header-toggle{
+                width: 80%;
             }
         }
         @media(max-width: 992px){
             .header{
                 width: 100%;
-            }
-        }
-        @media(max-width: 575px){
-            .header{
                 .start-header{
                     .title-header{
+                        margin-left: 60px;
                         font-size: 1.5rem;
+                    }
+                    .btn-open-sidebar{
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+                        top: 30px;
+                        left: 20px;
                     }
                 }
                 .end-header{
@@ -103,6 +113,24 @@ body{
                         border-radius: 5px;
                         line-height: 30px;
                         font-size: 0.75rem;
+                    }
+                }
+            }
+        }
+        @media(max-width: 575px){
+            .header{
+                padding: 0 10px;
+                .start-header{
+                    .title-header{
+                        font-size: 1rem;
+                    }
+                }
+                .end-header{
+                    flex-direction: column;
+                    width: 150px;
+                    align-items: center;
+                    .btn-download{
+                        margin-bottom: 5px;
                     }
                 }
             }

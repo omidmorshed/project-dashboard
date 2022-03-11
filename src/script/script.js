@@ -1,22 +1,30 @@
 const listItems = document.querySelectorAll('.first-item-list-link')
-const listSubmenus = document.querySelectorAll('.submenu-list')
 const btnOpenSidebar = document.querySelector('.btn-open-sidebar')
 const sidebar = document.querySelector('.sidebar')
-const btnToggle = document.querySelector('.btn-up-down')
-const arrowMenuSidebar = document.querySelector('.first-item-list-link .arrow')
+const header = document.querySelector('.header')
+const btnClose = document.getElementById('close')
 
 
 
 // script sidebar***********
 
 listItems.forEach(element => {
-    element.addEventListener('click', (e)=>{
+    element.addEventListener('click', (e) => {
         e.target.nextElementSibling.classList.toggle('active')
         const arrow = element.childNodes[2];
         arrow.classList.toggle('arrow-active')
-    })    
+    })
 });
 
+
+btnOpenSidebar.addEventListener('click', () => {
+    sidebar.classList.toggle('open-sidebar')
+    header.classList.toggle('header-toggle')
+})
+
+btnClose.addEventListener('click', () => {
+    sidebar.classList.remove('open-sidebar')
+})
 
 
 
@@ -27,7 +35,7 @@ listItems.forEach(element => {
 //         const arrow = element.childNodes.classList = ('arrow')
 //         console.log(arrow);
 //         // element.childNodes['.arrow'].classList.toggle('arrow-active')
-//     })    
+//     })
 // });
 
 //*************submenu in sidebar */
@@ -51,9 +59,7 @@ listItems.forEach(element => {
 // }
 // //************btn open sidebar */
 
-// btnOpenSidebar.addEventListener('click', ()=>{
-//     sidebar.classList.toggle('open-sidebar')
-// })
+
 
 // btnToggle.addEventListener('click', ()=>{
 //     sidebar.classList.toggle('show')
