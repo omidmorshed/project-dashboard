@@ -1,15 +1,14 @@
-const listItems = document.querySelectorAll('.first-item-list-link')
+const listItemsSidebarMenu = document.querySelectorAll('.first-item-list-link')
 const btnOpenSidebar = document.querySelector('.btn-open-sidebar')
 const sidebar = document.querySelector('.sidebar')
 const header = document.querySelector('.header')
-const btnClose = document.getElementById('close')
-const topSidebar = document.querySelector('.top-sidebar')
+const btnCloseSidebar = document.getElementById('close')
 
 
 
 // script sidebar***********
 
-listItems.forEach(element => {
+listItemsSidebarMenu.forEach(element => {
     element.addEventListener('click', (e) => {
         e.target.nextElementSibling.classList.toggle('active')
         const arrow = element.childNodes[2];
@@ -23,7 +22,7 @@ btnOpenSidebar.addEventListener('click', () => {
     header.classList.toggle('header-toggle')
 })
 
-btnClose.addEventListener('click', () => {
+btnCloseSidebar.addEventListener('click', () => {
     sidebar.classList.remove('open-sidebar')
 })
 
