@@ -3,6 +3,7 @@ const btnOpenSidebar = document.querySelector('.btn-open-sidebar')
 const sidebar = document.querySelector('.sidebar')
 const header = document.querySelector('.header')
 const btnClose = document.getElementById('close')
+const topSidebar = document.querySelector('.top-sidebar')
 
 
 
@@ -26,6 +27,9 @@ btnClose.addEventListener('click', () => {
     sidebar.classList.remove('open-sidebar')
 })
 
+// if(topSidebar.style.height < '800px'){
+//     sidebar
+// }
 
 
 // listItems.forEach(element => {

@@ -205,6 +205,28 @@ body .main .sidebar {
   justify-content: space-between;
   transition: all 0.3s;
   overflow: hidden;
+  /* width */
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+body .main .sidebar ::-webkit-scrollbar {
+  width: 4px;
+}
+body .main .sidebar ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+body .main .sidebar ::-webkit-scrollbar-thumb {
+  background: #6c757e;
+  border-radius: 10px;
+}
+body .main .sidebar ::-webkit-scrollbar-thumb:hover {
+  background: #7a6bff;
+}
+body .main .sidebar .top-sidebar {
+  height: 800px;
+  overflow-y: scroll;
 }
 body .main .sidebar .top-sidebar .close {
   display: none;
@@ -246,6 +268,12 @@ body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .first-item-list
   position: relative;
   transition: all 0.2s;
 }
+body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .first-item-list-link:hover {
+  color: #7a6bff;
+}
+body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .first-item-list-link:hover .icon {
+  color: #7a6bff;
+}
 body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .first-item-list-link .icon {
   color: rgba(0, 0, 0, 0.25);
   transition: all 0.2s;
@@ -261,12 +289,6 @@ body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .first-item-list
 body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .first-item-list-link .arrow-active {
   transform: rotate(90deg);
 }
-body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .first-item-list-link:hover {
-  color: #7a6bff;
-}
-body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .first-item-list-link:hover .icon {
-  color: #7a6bff;
-}
 body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .submenu-list {
   overflow: hidden;
   height: 0;
@@ -278,6 +300,10 @@ body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .submenu-list .s
   font-weight: 200;
   padding-left: 35px;
 }
+body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .submenu-list .submenu-list-link:hover {
+  color: #7a6bff;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.3);
+}
 body .main .sidebar .top-sidebar .menu-sidebar .first-item-list .active {
   height: 100px;
   max-height: 200px;
@@ -286,20 +312,20 @@ body .main .sidebar .bottom-sidebar {
   min-height: 40px;
   line-height: 40px;
 }
-body .main .sidebar .bottom-sidebar .control-user-menu .control-user-menu-link {
+body .main .sidebar .bottom-sidebar .control-user-menu-link {
   color: #6c757e;
   display: block;
   font-weight: 200;
   position: relative;
   transition: all 0.2s;
 }
-body .main .sidebar .bottom-sidebar .control-user-menu .control-user-menu-link .icon {
+body .main .sidebar .bottom-sidebar .control-user-menu-link .icon {
   margin-right: 12px;
 }
-body .main .sidebar .bottom-sidebar .control-user-menu .control-user-menu-link:hover {
+body .main .sidebar .bottom-sidebar .control-user-menu-link:hover {
   color: #7a6bff;
 }
-body .main .sidebar .bottom-sidebar .control-user-menu .control-user-menu-link:hover .icon {
+body .main .sidebar .bottom-sidebar .control-user-menu-link:hover .icon {
   color: #7a6bff;
 }
 @media (max-width: 1200px) and (min-width: 993px) {
@@ -309,14 +335,14 @@ body .main .sidebar .bottom-sidebar .control-user-menu .control-user-menu-link:h
     padding: 0;
     border: 0;
   }
-  body .main .sidebar .top-sidebar .sidebar-logo {
+  body .main .sidebar .sidebar-logo {
     height: 90px;
   }
-  body .main .sidebar .top-sidebar .sidebar-logo .sidebar-logo-link {
+  body .main .sidebar .sidebar-logo .sidebar-logo-link {
     color: #7a6bff;
     font-size: 1.5rem;
   }
-  body .main .sidebar .top-sidebar .sidebar-logo .sidebar-logo-link .icon {
+  body .main .sidebar .sidebar-logo .sidebar-logo-link .icon {
     margin-right: 15px;
   }
   body .main .open-sidebar {
@@ -348,7 +374,7 @@ body .main .sidebar .bottom-sidebar .control-user-menu .control-user-menu-link:h
   body .main .sidebar {
     width: 60%;
   }
-  body .main .sidebar .top-sidebar .sidebar-logo .sidebar-logo-link {
+  body .main .sidebar .sidebar-logo-link {
     font-size: 1.5rem;
     padding: 0 30px;
   }
